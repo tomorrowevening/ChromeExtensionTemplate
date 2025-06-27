@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Your Extension",
+  "version": "1.0.0",
+  "permissions": ["scripting","tabs","activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "action": { "default_title": "Your Extension" },
+  "devtools_page": "src/devtools/devtools.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["connection.js", "mouseTest.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
